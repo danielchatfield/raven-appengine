@@ -4,21 +4,21 @@
 
 ## Usage
 
-1. Make sure your dsn uses one of the special protocols: `appengine+http` or `appengine+https`.
-2. Enable `deferred` in your `app.yaml`
+*. Make sure your dsn uses one of the special protocols: `appengine+http` or `appengine+https`.
+*. Enable `deferred` in your `app.yaml`
 
 ```yaml
 builtins:
 - deferred: on
 ```
-3. Define the `sentry` queue
+*. Define the `sentry` queue
 
 ```
 queue:
 - name: sentry
   rate: 5/s
 ```
-4. Register the transport before setting up the `Sentry` instance.
+*. Register the transport before setting up the `Sentry` instance.
 
 ```python
 from raven_appengine import register_transport
