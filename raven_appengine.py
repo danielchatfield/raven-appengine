@@ -51,3 +51,4 @@ class AppEngineTransport(AsyncTransport, HTTPTransport):
 def register_transport():
     from raven import Client
     Client.register_scheme('appengine+http', AppEngineTransport)
+    Client.register_scheme('appengine+https', AppEngineTransport)
