@@ -1,6 +1,6 @@
 # raven-appengine
 
-`raven-appengine` is an appengine compatible Transport for the raven-python client.
+`raven-appengine` is an appengine optimised Transport for the `raven-python` client. It supports asynchronous sending of messages using Google's `deferred` library.
 
 ## Usage
 
@@ -29,7 +29,7 @@ register_transport()
 ```
 ## Limitations
 
-Always calls the success callback, even if it fails. This is not a very big issue as appengine automatically retries failed attempts.
+Always calls the success callback, even if it fails. This is not a very big issue as appengine automatically retries failed attempts. Failed attempts still raise an exception that is logged to the appengine logger so it doesn't fail silently.
 
 ## License
 
