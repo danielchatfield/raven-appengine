@@ -11,14 +11,14 @@
 builtins:
 - deferred: on
 ```
-* Define the `sentry` queue
+* Define the `sentry` queue in queue.yaml
 
 ```
 queue:
 - name: sentry
   rate: 5/s
 ```
-* Register the transport before setting up the `Sentry` instance.
+* Register the transport **before** setting up the `Sentry` instance.
 
 ```python
 from raven_appengine import register_transport
