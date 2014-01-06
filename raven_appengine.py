@@ -8,7 +8,6 @@
 
     :copyright: (c) 2013 by Daniel Chatfield
 """
-from libs import fix_path
 
 from raven.transport import AsyncTransport, HTTPTransport
 
@@ -20,8 +19,6 @@ except:
     raise ImportError("AppEngineTransport requires the deferred "
                       "library. Enable it in the builtins section "
                       "of app.yaml.")
-
-fix_path()
 
 class AppEngineTransport(AsyncTransport, HTTPTransport):
     """
