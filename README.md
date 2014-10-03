@@ -1,5 +1,7 @@
 # raven-appengine
 
+In the interest of avoiding confusion, this repo is related to the client library for getsentry.com (named raven) not the authentication protocol for Cambridge University with the same name.
+
 `raven-appengine` is an appengine optimised Transport for the `raven-python` client. It supports asynchronous sending of messages using Google's `deferred` library.
 
 ## Usage
